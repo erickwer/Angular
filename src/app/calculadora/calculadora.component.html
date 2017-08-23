@@ -1,0 +1,29 @@
+
+
+<div class="container" >  
+  <div class="btn" >
+    <input class="form-control" id="display" type="text" name="display" [value]="display"readonly><br>
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('1')">1</button> <!-- Click é o evento, clicou() é a chamada da função-->
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('2')">2</button>
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('3')">3</button>
+      <button type="button" class="btn btn-primary"(click) ="defOperacao('-')">-</button><br>
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('4')">4</button>
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('5')">5</button>
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('6')">6</button>
+      <button type="button" class="btn btn-primary"(click) ="defOperacao('+')">+</button><br>
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('7')">7</button>
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('8')">8</button>
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('9')">9</button>
+      <button type="button" class="btn btn-primary"(click) ="defOperacao('*')">*</button><br>
+      <button type="button" class="btn btn-secondary"(click) ="adicionarNumero('0')">0</button>
+      <button type="button" class="btn btn-primary"(click) ="adicionarNumero('.')">.</button>
+      <button type="button" class="btn btn-primary"(click) ="calcular()">=</button>
+      <button type="button" class="btn btn-primary"(click) ="defOperacao('/')">/</button><br>
+      <button type="button" class="btn btn-danger"(click) ="limpar()">C</button>
+  </div>
+</div>
+
+  
+
+        
+    
