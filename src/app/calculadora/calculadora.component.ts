@@ -17,7 +17,6 @@ export class CalculadoraComponent implements OnInit {
     static readonly MULTIPLICACAO:string='*';
 
   constructor() {
-    
    }
 
   ngOnInit() {
@@ -76,31 +75,48 @@ export class CalculadoraComponent implements OnInit {
 
   
   resultadoOp(n1: number,n2: number, operacao: string): number {
-    if (operacao=="+"){
+    if (operacao=="SOMA"){
       this.resultado= n1+n2;
+      this.primeiro_num = this.resultado.toString();
+      this.segundo_num =null;
+      this.operacao=null;
       return;
     }
-    if (operacao=="-"){
+    if (operacao=="SUBTRACAO"){
       this.resultado=  n1-n2;
+      this.primeiro_num = this.resultado.toString();
+      this.segundo_num =null;
+      this.operacao=null;
       return;
     }
-    if (operacao=="/"){
+    if (operacao=="DIVISAO"){
       this.resultado=  n1/n2;
+      this.primeiro_num = this.resultado.toString();
+      this.segundo_num =null;
+      this.operacao=null;
       return;
     }
-    if (operacao=="*"){
+    if (operacao=="MULTIPLICACAO"){
       this.resultado=  n1*n2;
+      this.primeiro_num = this.resultado.toString();
+      this.segundo_num =null;
+      this.operacao=null;
       return;
     }
   }
 
   calcular():string {
+    if (this.segundo_num== null){
+      return;
+    }
+
     this.resultadoOp( parseFloat(this.primeiro_num),
     parseFloat(this.segundo_num), this.operacao);
-    return;
+    
+
   } 
 
-  get display(): string {
+ get display(): string {
    if (this.resultado !== null){
      return this.resultado.toString();
    }
